@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AUTH</title>
+  <title>Auth Page</title>
   <link rel="stylesheet" href="index.css" />
   <script src="https://kit.fontawesome.com/009e21edfd.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
 </head>
-
 <body>
   <div class="container">
     <div class="form">
-      <h1>Sign Up</h1>
-      <form>
+      <h1 id="title">Sign Up</h1>
+      <form id="authForm" aria-labelledby="title">
         <div class="input-group">
-          <div class="input-field" id="name">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="Name" />
+          <div class="input-field" id="namefield">
+            <label for="name">
+              <i class="fa-solid fa-user"></i>
+              <span class="sr-only">Name</span>
+            </label>
+            <input type="text" id="name" placeholder="Name" aria-required="true" required />
           </div>
           <div class="input-field">
-            <i class="fa-solid fa-envelope-open-text"></i>
-            <input type="email" placeholder="Email" />
+            <label for="email">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <span class="sr-only">Email</span>
+            </label>
+            <input type="email" id="email" placeholder="Email" aria-required="true" required />
           </div>
           <div class="input-field">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password" />
+            <label for="password">
+              <i class="fa-solid fa-lock"></i>
+              <span class="sr-only">Password</span>
+            </label>
+            <input type="password" id="password" placeholder="Password" aria-required="true" required />
           </div>
         </div>
         <div class="buttons">
-          <button type="button" id="signupbtn">SIGN UP</button>
-          <button type="button" id="signinbtn" class="disable">SIGN IN</button>
+          <button id="signinbtn" type="button">Sign In</button>
+          <button id="signupbtn" type="button">Sign Up</button>          
         </div>
       </form>
     </div>
   </div>
 </body>
-
 </html>
